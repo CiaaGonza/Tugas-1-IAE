@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cari Lagu Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Cari Lagu di Spotify</h1>
+        <form action="{{ url_for('search') }}" method="post" class="d-flex justify-content-center">
+            <input type="text" name="query" class="form-control w-50 me-2" placeholder="Masukkan judul lagu atau artis" required>
+            <button type="submit" class="btn btn-success">Cari</button>
+        </form>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('login') }}" class="btn btn-outline-light">Login dengan Spotify</a>
+        </div>
+    </div>
+</body>
+</html>
